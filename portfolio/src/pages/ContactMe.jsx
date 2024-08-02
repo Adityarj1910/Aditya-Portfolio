@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Hamburgerstate from '../components/Hamburgerstate';
 import { useNavigate } from 'react-router-dom';
 import '../css/contactMe.css';
-
+import Footer from '../components/Footer';
 
 function ContactMe(){
   return(
@@ -43,6 +43,7 @@ function ContactMe(){
           </div>
         </div>
       </div>
+      <Footer />
     </>
   ) 
 }

@@ -5,10 +5,14 @@
     margin: 0;
     padding: 0;
 }
-.body{
-    height: 93vh;
+.main-body{
+    height: 100vh;
     width: 100vw;
+    /* background-image: url('../images/bgc.jpg'); */
+    /* background-image: url('../images/bgc2.jpg'); */
 
+/* background-size: cover; */
+/* background-repeat: no-repeat; */
     /* background-image: linear-gradient(to top left,  black 0%,  #434343 100%);  */
     /* color: #fff; */
 }
@@ -31,6 +35,9 @@
     /* align-items: center; */
     display: flex;
     justify-content: space-around;
+    /* border-style:dashed; */
+    /* border-width: 1px; */
+    /* border-color: black; */
 }
 
 .devPic img{

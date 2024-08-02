@@ -17,7 +17,7 @@ function Home(){
 
   return(
     <>
-      <div className='body'>
+      <div className='main-body'>
         {/* <div className='head'> */}
         <Hamburgerstate />
         {/* </div> */}
@@ -36,7 +36,7 @@ function Home(){
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
