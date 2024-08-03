@@ -11,7 +11,7 @@ function ContactMe(){
         {/* <div className='head'> */}
         <Hamburgerstate />
         {/* </div> */}
-        <div className='main'>
+        <div className='contact-main'>
           <div className='content'>
             <div className="contInfo">
               <div className="contact">Contact Me</div>

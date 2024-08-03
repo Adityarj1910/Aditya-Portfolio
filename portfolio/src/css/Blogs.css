@@ -29,6 +29,11 @@
   /* height: 82vh; */
   display: flex;
   justify-content: center;
+  /* background-image: blur; */
+  /* filter: blur(1px); */
+  /* -webkit-filter: blur(8px); */
+  
+
 }
 
 .card{
@@ -48,6 +53,8 @@ h1{
 
 
 .card-body{
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
   width: 1550px;
   border-width: 1px;
   border-style: solid;

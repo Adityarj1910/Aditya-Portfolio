@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 
+/* #root{
+    background-image: url('../images/bgc5.jpg');
+} */
 *{
     margin: 0;
     padding: 0;
@@ -14,13 +17,15 @@
 /* background-size: cover; */
 /* background-repeat: no-repeat; */
     /* background-image: linear-gradient(to top left,  black 0%,  #434343 100%);  */
+    background-color: pink;
     /* color: #fff; */
 }
 
 
 .main{
     /* background-color: yellow; */
-    height: 100vh;
+    /* height: 100vh; */
+    padding-top: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
