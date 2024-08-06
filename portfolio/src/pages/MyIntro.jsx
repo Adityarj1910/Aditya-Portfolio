@@ -1,19 +1,58 @@
 import React, { useEffect, useState } from 'react';
 import Hamburgerstate from '../components/Hamburgerstate';
-import { useNavigate } from 'react-router-dom';
-import '../css/MyIntro.css'
+import '../css/MyIntro.css';
 import myImage from '../images/project.png';
-import resume from '../assets/Aditya-Resme.pdf'
 import Footer from '../components/Footer';
-// import { useNavigate } from 'react-router-dom';
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import img1 from '../images/img1.jpg';
+import img2 from '../images/img2.jpg';
+import img3 from '../images/img3.jpg';
+import img4 from '../images/img4.jpg';
+import img5 from '../images/img5.jpg';
+import img6 from '../images/img6.jpg';
+import img7 from '../images/img7.jpg';
+import img8 from '../images/img8.jpg';
+import img9 from '../images/img9.jpg';
+import img10 from '../images/img10.jpg';
 
-function myIntro(){
-  const navigate = useNavigate();
+export const sliderImageUrl = [
+  { url: img1 },
+  { url: img2 },
+  { url: img3 },
+  { url: img4 },
+  { url: img5 },
+  { url: img6 },
+  { url: img7 },
+  { url: img8 },
+  { url: img9 },
+  { url: img10 }
+];
 
-  const contactMe = () => {
-    navigate('/contactMe'); 
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 4,
+    slidesToSlide: 2 // optional, default to 1.
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 768 },
+    items: 3,
+    slidesToSlide: 3 // optional, default to 1.
+  },
+  mobile: {
+    breakpoint: { max: 767, min: 464 },
+    items: 2,
+    slidesToSlide: 2 // optional, default to 1.
+  }
+};
+
+function MyIntro() {
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex) => {
+    setIndex(selectedIndex);
   };
-
 
   return (
     <>
@@ -22,79 +61,106 @@ function myIntro(){
         <div className='content-main'>
           <div className="content-head">
             <div className="left">
-              <h1>So, Who am I? Lorem, ipsum.</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quaerat odio sunt ducimus, quod voluptatem, eaque odit quisquam non praesentium id assumenda doloribus voluptate soluta hic facilis quo! Quam laborum necessitatibus rerum suscipit ipsam omnis neque perspiciatis debitis. Eum animi non blanditiis et deleniti odio ex, autem libero, soluta voluptatum amet! Nihil repudiandae, dignissimos deserunt quis repellendus ratione qui maiores laborum quos eligendi doloremque in, recusandae facilis expedita dolorem dicta, hic accusamus aperiam architecto sequi assumenda. Sapiente assumenda saepe mollitia quasi natus, sint recusandae? Enim aliquid, quibusdam quam eius quaerat deserunt magni, corporis aut suscipit a aspernatur reprehenderit omnis officia.</p>
-
+              <h1>So, Who am I?</h1>
+              <p>My name is Aditya. I love taking pictures of Sunset and Sunrise. Beside that I am a part-time 4th year undergrad❤️</p>
+              <div>Skill set</div>
               <div className="lower">
                 <div className="skill">
-                  <h3>Skill set</h3>
                   <div className="center">
-                    {/* <h4>Skill</h4> */}
-                    <div className="sub">c++</div>
+                    <div className="sub">C++</div>
                     <div className="prog">
                       <div className="a90"></div>
                     </div>
                   </div>
                   <div className="center">
-                    {/* <h4>Skill</h4> */}
-                    <div className="sub">html</div>
+                    <div className="sub">Java</div>
                     <div className="prog">
-                      <div className="a80"></div>
+                      <div className="a70"></div>
                     </div>
                   </div>
                   <div className="center">
-                    {/* <h4>Skill</h4> */}
-                    <div className="sub">css</div>
-                    <div className="prog">
-                      <div className="a75"></div>
-                    </div>
-                  </div>
-                  <div className="center">
-                    {/* <h4>Skill</h4> */}
-                    <div className="sub">js</div>
-                    <div className="prog">
-                      <div className="a80"></div>
-                    </div>
-                  </div>
-                  <div className="center">
-                    {/* <h4>Skill</h4> */}
-                    <div className="sub">react.js</div>
+                    <div className="sub">Python</div>
                     <div className="prog">
                       <div className="a60"></div>
                     </div>
                   </div>
                   <div className="center">
-                    {/* <h4>Skill</h4> */}
-                    <div className="sub">sql</div>
+                    <div className="sub">Problem Solving</div>
                     <div className="prog">
-                      <div className="a75"></div>
+                      <div className="a80"></div>
+                    </div>
+                  </div>
+                  <div className="center">
+                    <div className="sub">JavaScript</div>
+                    <div className="prog">
+                      <div className="a80"></div>
                     </div>
                   </div>
                 </div>
-                <div className="sk">
-                  <h3>Set Skill</h3>
+                <div className="skill">
+                  <div className="center">
+                    <div className="sub">HTML/CSS</div>
+                    <div className="prog">
+                      <div className="a80"></div>
+                    </div>
+                  </div>
+                  <div className="center">
+                    <div className="sub">React.js</div>
+                    <div className="prog">
+                      <div className="a70"></div>
+                    </div>
+                  </div>
+                  <div className="center">
+                    <div className="sub">SQL</div>
+                    <div className="prog">
+                      <div className="a65"></div>
+                    </div>
+                  </div>
+                  <div className="center">
+                    <div className="sub">Git/GitHub</div>
+                    <div className="prog">
+                      <div className="a60"></div>
+                    </div>
+                  </div>
+                  <div className="center">
+                    <div className="sub">Photography</div>
+                    <div className="prog">
+                      <div className="a90"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-
             <div className="right">
               <img src={myImage} alt='me' className='self' />
             </div>
-            
           </div>
         </div>
-        <div className="blogsmain">
-          <div className="blogs">
-            {/* {cards.map((card, index) => (
-              <div key={index} className="blog">
-                <div className="card-body">
-                  <h3 className="card-title"><u>{card.title}</u></h3>
-                  <p className="card-text">{card.text}</p>
-                  <p className="card-time"><small className="text-body-secondary">{card.time}</small></p>
-                </div>
-              </div>
-            ))} */}
-            
+        <div className='grand'>
+          <div className="parent">
+            <Carousel
+              responsive={responsive}
+              draggable={false}
+              autoPlay={true}
+              autoPlaySpeed={5000}
+              swipeable={true}
+              showDots={false}
+              infinite={true}
+              partialVisible={true}
+              dotListClass="custom-dot-list-style"
+            >
+              {sliderImageUrl.map((imageUrl, index) => {
+                return (
+                  <div className="slider" key={index}>
+                    <img src={imageUrl.url} alt="movie" onClick={imageUrl.url}/>
+                  </div>
+                );
+              })}
+            </Carousel>
+          </div>
+          <div className="lr">
+              <h3>Photography</h3>
+              <p>Lorem aaipsum dolor sit amet consectetur adipisicing elit. Sint fugit architecto inventore, totam ea optio est asperiores ex consequatur veniam dicta nesciunt ab ad, placeat explicabo! Quos eius quibusdam nulla voluptas hic fugiat asperiores nemo! Eaque vitae saepe ut aperiam molestias voluptatem harum cum dolores! Vitae illum rem nostrum esse ut, voluptatibus eum sunt omnis. Neque unde quos facilis voluptatibus.</p>
           </div>
         </div>
       </div>
@@ -103,4 +169,4 @@ function myIntro(){
   );
 }
 
-export default myIntro;
+export default MyIntro;
