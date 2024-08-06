@@ -1,6 +1,7 @@
 {
+  "private": false,
+  "homepage": "https://Adityarj1910.github.io/Aditya-Portfolio/portfolio",
   "name": "portfolio",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
